@@ -1,0 +1,258 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carbon - Admin Template</title>
+    <link rel="stylesheet" href="./vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="./vendor/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="sidebar-fixed header-fixed">
+    <div class="page-wrapper">
+        <nav class="navbar page-header">
+            <a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <a class="navbar-brand" href="#">
+                <img src="./imgs/logo.png" alt="logo">
+            </a>
+
+            <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item d-md-down-none">
+                    <a href="#">
+                        <i class="fa fa-bell"></i>
+                        <span class="badge badge-pill badge-danger">5</span>
+                    </a>
+                </li>
+
+                <li class="nav-item d-md-down-none">
+                    <a href="#">
+                        <i class="fa fa-envelope-open"></i>
+                        <span class="badge badge-pill badge-danger">5</span>
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="./imgs/avatar-1.png" class="avatar avatar-sm" alt="logo">
+                        <span class="small ml-1 d-md-down-none">John Smith</span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <!--<div class="dropdown-header">Account</div>
+
+                        <a href="#" class="dropdown-item">
+                            <i class="fa fa-user"></i> Profile
+                        </a>
+
+                        <a href="#" class="dropdown-item">
+                            <i class="fa fa-envelope"></i> Messages
+                        </a>-->
+
+                        <div class="dropdown-header">Settings</div>
+
+                        <a href="#" class="dropdown-item">
+                            <i class="fa fa-bell"></i> Notifications
+                        </a>
+
+                        <a href="#" class="dropdown-item">
+                            <i class="fa fa-wrench"></i> Settings
+                        </a>
+
+                        <a href="#" class="dropdown-item">
+                            <i class="fa fa-lock"></i> Logout
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="main-container">
+            <div class="sidebar">
+                <nav class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="nav-title">Navigation</li>
+
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link active">
+                                <i class="icon icon-speedometer"></i> 项目总览
+                            </a>
+                        </li>
+
+                        <li class="nav-item nav-dropdown">
+                            <a href="#" class="nav-link nav-dropdown-toggle">
+                                <i class="icon icon-target"></i> 数据管理 <i class="fa fa-caret-left"></i>
+                            </a>
+
+                            <ul class="nav-dropdown-items">
+                                <li class="nav-item">
+                                    <a href="upload.html" class="nav-link">
+                                        <i class="icon icon-target"></i> 数据上传
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="download.html" class="nav-link">
+                                        <i class="icon icon-target"></i> 配置下载
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="tables.html" class="nav-link">
+                                <i class="icon icon-grid"></i> 数据查询
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="settings.html" class="nav-link">
+                                <i class="icon icon-puzzle"></i> 信息修改
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="callus.html" class="nav-link">
+                                <i class="icon icon-graph"></i> 联系我们
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="logout.html" class="nav-link">
+                                <i class="icon icon-energy"></i> 注销
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card p-4">
+                                <div class="card-body d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span id="usernum" class="h4 d-block font-weight-normal mb-2"> </span>
+                                        <span class="font-weight-light">用户总数</span>
+                                    </div>
+
+                                    <div class="h2 text-muted">
+                                        <i class="icon icon-people"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card p-4">
+                                <div class="card-body d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span id="datnum" class="h4 d-block font-weight-normal mb-2"> </span>
+                                        <span class="font-weight-light">信息总数</span>
+                                    </div>
+
+                                    <div class="h2 text-muted">
+                                        <i class="icon icon-wallet"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card p-4">
+                                <div class="card-body d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span id="config" class="h4 d-block font-weight-normal mb-2"> </span>
+                                        <span class="font-weight-light">配置信息</span>
+
+                                    </div>
+
+                                    <div class="h2 text-muted">
+                                        <i class="icon icon-cloud-download"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card p-4">
+                                <div class="card-body d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span id="timesin"class="h4 d-block font-weight-normal mb-2"> </span>
+                                        <span class="font-weight-light">登录次数</span>
+                                    </div>
+
+                                    <div class="h2 text-muted">
+                                        <i class="icon icon-clock"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/popper.js/popper.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./vendor/chart.js/chart.min.js"></script>
+    <script src="./js/carbon.js"></script>
+    <script src="./js/demo.js"></script>
+    <script src="./js/cookie.min.js"></script>
+
+
+
+    <script>
+
+        $(document).ready(function () {
+            var cookies = cookie.get('username');
+            if (cookies == false) {
+                alert("请先登录");
+                window.location.href = "/";
+            }
+            else {
+                $.ajax({
+                    type: 'POST',
+                    url: "index",
+                    data: JSON.stringify({
+                        index: 'index'
+                    }),
+                    error: function (e) {
+                        console.log(e);
+                    },
+                    success: function (data) {
+                        if (data.err == false) {
+                            $('#datnum').text(data.datnum);
+                            $('#usernum').text(data.usernum); 
+                            $('#timesin').text(data.times);
+                            $('#config').text(data.exists);
+                            console.log(data);
+
+                        }
+                        else {
+                            alert("error");
+                        }
+                    },
+                    complete: function () {
+                    },
+                    dataType: "json",
+                    contentType: "application/json"
+                });
+            }
+        });
+
+
+
+
+    </script>
+</body>
+</html>

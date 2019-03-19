@@ -1,0 +1,446 @@
+﻿<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Carbon - Admin Template</title>
+		<link rel="stylesheet" href="./vendor/simple-line-icons/css/simple-line-icons.css">
+		<link rel="stylesheet" href="./vendor/font-awesome/css/fontawesome-all.min.css">
+		<link rel="stylesheet" href="./css/styles.css">
+	</head>
+
+	<body class="sidebar-fixed header-fixed">
+		<div class="page-wrapper">
+			<nav class="navbar page-header">
+				<a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
+					<i class="fa fa-bars"></i>
+				</a>
+
+				<a class="navbar-brand" href="#">
+					<img src="./imgs/logo.png" alt="logo">
+				</a>
+
+				<a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
+					<i class="fa fa-bars"></i>
+				</a>
+
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item d-md-down-none">
+						<a href="#">
+							<i class="fa fa-bell"></i>
+							<span class="badge badge-pill badge-danger">5</span>
+						</a>
+					</li>
+
+					<li class="nav-item d-md-down-none">
+						<a href="#">
+							<i class="fa fa-envelope-open"></i>
+							<span class="badge badge-pill badge-danger">5</span>
+						</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<img src="./imgs/avatar-1.png" class="avatar avatar-sm" alt="logo">
+							<span class="small ml-1 d-md-down-none">John Smith</span>
+						</a>
+
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-header">Account</div>
+
+							<a href="#" class="dropdown-item">
+								<i class="fa fa-user"></i> Profile
+							</a>
+
+							<a href="#" class="dropdown-item">
+								<i class="fa fa-envelope"></i> Messages
+							</a>
+
+							<div class="dropdown-header">Settings</div>
+
+							<a href="#" class="dropdown-item">
+								<i class="fa fa-bell"></i> Notifications
+							</a>
+
+							<a href="#" class="dropdown-item">
+								<i class="fa fa-wrench"></i> Settings
+							</a>
+
+							<a href="#" class="dropdown-item">
+								<i class="fa fa-lock"></i> Logout
+							</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="main-container">
+				<div class="sidebar">
+					<nav class="sidebar-nav">
+						<ul class="nav">
+							<li class="nav-title">Navigation</li>
+
+							<li class="nav-item">
+								<a href="index.html" class="nav-link ">
+									<i class="icon icon-speedometer"></i> 项目总览
+								</a>
+							</li>
+
+							<li class="nav-item nav-dropdown">
+								<a href="#" class="nav-link nav-dropdown-toggle">
+									<i class="icon icon-target"></i> 数据管理 <i class="fa fa-caret-left"></i>
+								</a>
+
+								<ul class="nav-dropdown-items">
+									<li class="nav-item">
+										<a href="upload.html" class="nav-link">
+											<i class="icon icon-target"></i> 数据上传
+										</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="download.html" class="nav-link">
+											<i class="icon icon-target"></i> 配置下载
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a href="tables.html" class="nav-link">
+									<i class="icon icon-grid"></i> 数据查询
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="settings.html" class="nav-link active">
+									<i class="icon icon-puzzle"></i> 信息修改
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="callus.html" class="nav-link">
+									<i class="icon icon-graph"></i> 联系我们
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="logout.html" class="nav-link">
+									<i class="icon icon-energy"></i> 注销
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="content">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-10">
+								<div class="card">
+									<div class="card-header bg-light">
+										信息修改
+									</div>
+
+									<div class="card-body">
+										<div class="row mb-5">
+											<div class="col-md-8">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="form-control-label">用户名</label>
+															<label class="form-control" id="username"></label>
+														</div>
+													</div>
+
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="form-control-label">昵称</label>
+															<input class="form-control" id="nickname">
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="form-control-label">电子邮箱</label>
+															<input class="form-control" id="email">
+														</div>
+													</div>
+
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="form-control-label">联系方式</label>
+															<input class="form-control" id="phone">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div>
+											<button type="submit" class="btn btn-primary" onclick="pasdchange()">修改密码</button>
+											<button type="submit" class="btn btn-primary" id="save" style="float: right;">保存修改</button>
+										</div>
+										<hr>
+
+										<div class="row mt-5" id="pasd_change1" style="visibility:hidden">
+											<div class="col-md-8">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="form-control-label">旧密码</label>
+															<input type="password" id="pasdold" class="form-control">
+														</div>
+													</div>
+
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="form-control-label">新密码</label>
+															<input type="password" id="pasdnew" class="form-control">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row " id="pasd_change2" style="visibility:hidden">
+											<div class="col-md-8">
+												<div class="row">
+													<div class="col-md-6">
+
+													</div>
+
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="form-control-label">再输一次</label>
+															<input type="password" id="pasdrp" class="form-control">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="warning" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header bg-warning border-0">
+						<h5 class="modal-title text-white">警告</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+					</div>
+
+					<div class="modal-body p-5">
+						信息格式错误，请重新填写！
+					</div>
+
+					<div class="modal-footer border-0">
+						<button type="button" class="btn btn-link" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="pasdempty" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header bg-warning border-0">
+						<h5 class="modal-title text-white">警告</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+					</div>
+
+					<div class="modal-body p-5">
+						旧密码不能为空！
+					</div>
+
+					<div class="modal-footer border-0">
+						<button type="button" class="btn btn-link" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="pasdunconform" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header bg-warning border-0">
+						<h5 class="modal-title text-white">警告</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+					</div>
+
+					<div class="modal-body p-5">
+						两次输入密码不同！
+					</div>
+
+					<div class="modal-footer border-0">
+						<button type="button" class="btn btn-link" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="pasdunmatch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header bg-warning border-0">
+						<h5 class="modal-title text-white">警告</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+					</div>
+
+					<div class="modal-body p-5">
+						密码错误！
+					</div>
+
+					<div class="modal-footer border-0">
+						<button type="button" class="btn btn-link" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./vendor/jquery/jquery.min.js"></script>
+		<script src="./vendor/popper.js/popper.min.js"></script>
+		<script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="./vendor/chart.js/chart.min.js"></script>
+		<script src="./js/carbon.js"></script>
+		<script src="./js/demo.js"></script>
+		<script src="./js/socket.io.js"></script>
+		<script src="./js/cookie.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var username = cookie.get('username');
+				$('#username').html(username);
+			})
+			$('#email,#phone,#pasdold,#pasdnew,#pasdrp').focus(function() {
+				$(this).css("border", "1px solid #ced4da");
+			});
+			var pasdstate = false;
+
+			function pasdchange() {
+				pasdstate = ~pasdstate;
+				if(pasdstate) {
+					$('#pasd_change1').css({
+						"visibility": "visible "
+					})
+					$('#pasd_change2').css({
+						"visibility": "visible "
+					})
+				} else {
+					$('#pasd_change1').css({
+						"visibility": "hidden "
+					})
+					$('#pasd_change2').css({
+						"visibility": "hidden "
+					})
+				}
+			}
+
+			$('#save').click(function() {
+				var nickname = $('#nickname').val();
+				var email = $('#email').val();
+				var phone = $('#phone').val();
+				var pasdold = $('#pasdold').val();
+				var pasdnew = $('#pasdnew').val();
+				var pasdrp = $('#pasdrp').val();
+
+				if(email) {
+					if(((email.split('@').length) - 1) != 1) {
+						$('#warning').modal('show');
+						$('#email').css("border", "1px solid red");
+						return;
+					} else if(((email.split('.').length) - 1) != 1) {
+						$('#warning').modal('show');
+						$('#email').css("border", "1px solid red");
+						return;
+					} else if(phone) {
+						if(phone.length != 11) {
+							$('#warning').modal('show');
+							$('#phone').css("border", "1px solid red");
+							return;
+						} else if(pasdold || pasdnew || pasdrp) {
+							if(!pasdold) {
+								$('#pasdempty').modal('show');
+								$('#pasdold').css("border", "1px solid red");
+								return;
+							} else if(pasdnew != pasdrp) {
+								$('#pasdunconform').modal('show');
+								$('#pasdnew').css("border", "1px solid red");
+								$('#pasdrp').css("border", "1px solid red");
+								return;
+							}
+						}
+					}
+				} else if(phone) {
+					if(phone.length != 11) {
+						$('#warning').modal('show');
+						$('#phone').css("border", "1px solid red");
+						return;
+					} else if(pasdold || pasdnew || pasdrp) {
+						if(!pasdold) {
+							$('#pasdempty').modal('show');
+							$('#pasdold').css("border", "1px solid red");
+							return;
+						} else if(pasdnew != pasdrp) {
+							$('#pasdunconform').modal('show');
+							$('#pasdnew').css("border", "1px solid red");
+							$('#pasdrp').css("border", "1px solid red");
+							return;
+						}
+					}
+				} else if(pasdold || pasdnew || pasdrp) {
+					if(!pasdold) {
+						$('#pasdempty').modal('show');
+						$('#pasdold').css("border", "1px solid red");
+						return;
+					} else if(pasdnew != pasdrp) {
+						$('#pasdunconform').modal('show');
+						$('#pasdnew').css("border", "1px solid red");
+						$('#pasdrp').css("border", "1px solid red");
+						return;
+
+					}
+				}
+				var username = cookie.get('username');
+				$.ajax({
+					type: 'POST',
+					url: "save",
+					data: JSON.stringify({
+						username: username,
+						email: email,
+						nickname: nickname,
+						phone:phone,
+						pasdold: pasdold,
+						pasdnew: pasdnew,
+					}),
+					error: function(e) {
+						console.log(e);
+					},
+					success: function(data) {
+						console.log("success");
+					},
+					complete: function() {
+						console.log("complete");
+					},
+					dataType: "json",
+					contentType: "application/json"
+				});
+			});
+		</script>
+	</body>
+
+</html>
